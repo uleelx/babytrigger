@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "babytrigger", "babytrigger\babytrigger.csproj", "{6854B190-021B-450E-8154-018E89E62E5F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6854B190-021B-450E-8154-018E89E62E5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6854B190-021B-450E-8154-018E89E62E5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6854B190-021B-450E-8154-018E89E62E5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6854B190-021B-450E-8154-018E89E62E5F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B5CC1096-404A-4E74-9C42-6C20168ADFE4}
+	EndGlobalSection
+EndGlobal
