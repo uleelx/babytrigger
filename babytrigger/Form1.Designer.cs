@@ -38,8 +38,14 @@
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
 			this.button1 = new System.Windows.Forms.Button();
 			this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+			this.启动时后台运行ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+			this.显示ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			this.contextMenuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -109,9 +115,47 @@
 			// 
 			// notifyIcon1
 			// 
+			this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
 			this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
 			this.notifyIcon1.Text = "BabyTrigger";
 			this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+			// 
+			// contextMenuStrip1
+			// 
+			this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.启动时后台运行ToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.显示ToolStripMenuItem,
+            this.退出ToolStripMenuItem});
+			this.contextMenuStrip1.Name = "contextMenuStrip1";
+			this.contextMenuStrip1.Size = new System.Drawing.Size(181, 98);
+			// 
+			// 启动时后台运行ToolStripMenuItem
+			// 
+			this.启动时后台运行ToolStripMenuItem.CheckOnClick = true;
+			this.启动时后台运行ToolStripMenuItem.Name = "启动时后台运行ToolStripMenuItem";
+			this.启动时后台运行ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.启动时后台运行ToolStripMenuItem.Text = "启动时后台运行";
+			this.启动时后台运行ToolStripMenuItem.Click += new System.EventHandler(this.启动时后台运行ToolStripMenuItem_Click);
+			// 
+			// toolStripSeparator1
+			// 
+			this.toolStripSeparator1.Name = "toolStripSeparator1";
+			this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+			// 
+			// 显示ToolStripMenuItem
+			// 
+			this.显示ToolStripMenuItem.Name = "显示ToolStripMenuItem";
+			this.显示ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.显示ToolStripMenuItem.Text = "显示";
+			this.显示ToolStripMenuItem.Click += new System.EventHandler(this.显示ToolStripMenuItem_Click);
+			// 
+			// 退出ToolStripMenuItem
+			// 
+			this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
+			this.退出ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.退出ToolStripMenuItem.Text = "退出";
+			this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
 			// 
 			// Form1
 			// 
@@ -136,6 +180,7 @@
 			this.DragEnter += new System.Windows.Forms.DragEventHandler(this.Form1_DragEnter);
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			this.contextMenuStrip1.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -151,6 +196,11 @@
 		private System.Windows.Forms.Timer timer1;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.NotifyIcon notifyIcon1;
+		private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+		private System.Windows.Forms.ToolStripMenuItem 启动时后台运行ToolStripMenuItem;
+		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+		private System.Windows.Forms.ToolStripMenuItem 显示ToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
 	}
 }
 

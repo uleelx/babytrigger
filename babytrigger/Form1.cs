@@ -42,6 +42,14 @@ namespace babytrigger
 				SetFile(filePath);
 			}
 
+			bool StartMinimized = (int)key.GetValue("StartMinimized", 0) == 1;
+
+			if (StartMinimized)
+			{
+				Program.StartMinimized = StartMinimized;
+				启动时后台运行ToolStripMenuItem.Checked = Program.StartMinimized;
+			}
+
 			if (Program.StartMinimized)
 			{
 				button1_Click(this, null);
@@ -138,6 +146,34 @@ namespace babytrigger
 			Visible = true;
 			ShowInTaskbar = true;
 			notifyIcon1.Visible = false;
+		}
+
+		private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Application.Exit();
+		}
+
+		private void 显示ToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			notifyIcon1_MouseDoubleClick(this, null);
+		}
+
+		private void 启动时后台运行ToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			RegistryKey key = Registry.CurrentUser.CreateSubKey(
+				@"Software\PeerSoft\BabyTrigger",
+				RegistryKeyPermissionCheck.ReadWriteSubTree
+			);
+
+
+			if (启动时后台运行ToolStripMenuItem.Checked)
+			{
+				key.SetValue("StartMinimized", 1);
+			}
+			else
+			{
+				key.SetValue("StartMinimized", 0);
+			}
 		}
 	}
 }
